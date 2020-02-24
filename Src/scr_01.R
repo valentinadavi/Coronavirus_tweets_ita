@@ -1,4 +1,8 @@
 library(rtweet)
+
+#Further reseach on coronavirus spreading in Italy
+
+#Retrieving
 coronavirus_lombardia <- search_tweets(
   "#coronavirus OR coronavirus, #Lombardia OR Lombardia", 
   n = 50000, 

@@ -6,5 +6,5 @@ italian_coronav_tweets1_2402 <- search_tweets2(
   retryonratelimit = TRUE,
   include_rts = FALSE, 
   lang = "it",
-  since_id = 
+  since_id =  
 )

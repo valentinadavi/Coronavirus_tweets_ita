@@ -15,11 +15,11 @@ italian_coronav_tweets1_2402 <- search_tweets2(
 save(italian_coronav_tweets1_2402, file = "Italian_coronav_tweets_2402.RData")
 
 # new try with older tweets 
-search_tweets2(
+italian_coronav_tweets_2402b <- search_tweets2(
   c("coronavirus"), n = 50000, 
   retryonratelimit = TRUE, 
   include_rts = FALSE, 
   lang = "it", 
-  since_id(1229719602764099585),
-  max_id(1231635361140543488)
+  since_id = 1229719602764099585,
+  max_id = 1231635361140543488
 )

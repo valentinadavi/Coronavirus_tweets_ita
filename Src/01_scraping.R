@@ -23,3 +23,7 @@ italian_coronav_tweets_2402b <- search_tweets2(
   since_id = 1229719602764099585,
   max_id = 1231635361140543488
 )
+
+#this retrieves 53543 tweets from 22 to 23 of february
+
+save(italian_coronav_tweets_2402b, file ="Italian_coronav_tweets_2402_b.RData")

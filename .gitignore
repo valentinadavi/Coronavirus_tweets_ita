@@ -3,6 +3,10 @@
 .RData
 .Ruserdata
 Italian_coronav_tweets_2402.RData
+<<<<<<< HEAD
 coronavirus_piemonte.RData
 coronavirus_veneto.RData
 coronavirus_lombardia.RData
+=======
+Italian_coronav_tweets_2402_b.RData
+>>>>>>> 8077c83fbefaae20153833b86730175dc1e81da8

@@ -27,3 +27,24 @@ italian_coronav_tweets_2402b <- search_tweets2(
 #this retrieves 53543 tweets from 22 to 23 of february
 
 save(italian_coronav_tweets_2402b, file ="Italian_coronav_tweets_2402_b.RData")
+
+
+#new download on 27/02
+
+last_id_2402 <- max_id(italian_coronav_tweets_2402b)
+
+italian_coronav_tweets_2702 <- search_tweets2(
+  c("coronavirus"), n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it", 
+  since_id = last_id_2402
+  
+)
+save(italian_coronav_tweets_2702, file = "italian_coronav_tweets_2702.RData")
+# retrieved 46756 tweets from 26th to 27th/02
+
+#trying to get the tweets before the 26 
+
+min_id_2702 <- min_id(italian_coronav_tweets_2702)  ??
+

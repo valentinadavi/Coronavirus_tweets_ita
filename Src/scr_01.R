@@ -26,6 +26,7 @@ coronavirus_lombardia1 <- search_tweets(
     lang = "it",
     since_id = last_id_lombardia
   )
+save(coronavirus_lombardia1, file = "coronavirus_lombardia1.RData")
 
 #Coronavirus in Veneto retrievng 6591 obs.-------------------------------------------------------
 
@@ -43,7 +44,7 @@ save(coronavirus_veneto, file = "coronavirus_veneto.RData")
 last_id_veneto <- max(coronavirus_veneto$status_id)
 
 
-coronavirus_veneto <- search_tweets(
+coronavirus_veneto1 <- search_tweets(
   "#coronavirus OR coronavirus, #Veneto OR Veneto", 
   n = 50000, 
   retryonratelimit = TRUE, 
@@ -52,6 +53,7 @@ coronavirus_veneto <- search_tweets(
   since_id = last_id_veneto
 )
 
+save(coronavirus_veneto1, file = "coronavirus_veneto1.RData")
 #Coronavirus in Piemonte retrieving 1719 obs.--------------------------------------------------------
 coronavirus_piemonte <- search_tweets(
   "#coronavirus OR coronavirus, #Piemonte OR Piemonte", 
@@ -74,3 +76,4 @@ coronavirus_piemonte1 <- search_tweets(
   lang = "it",
   since_id = last_id_piemonte
 )
+save(coronavirus_piemonte1, file = "coronavirus_piemonte1.RData")

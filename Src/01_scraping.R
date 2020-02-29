@@ -59,6 +59,6 @@ italian_coronav_tweets_2902 <- search_tweets2(
   max_id = max_id_2702
 )
 #retrieved 53442 observations from 2502 to 2602
-save(italian_coronav_tweets_2902,file = "Italian_coronav_tweets_2902")
+save(italian_coronav_tweets_2902,file = "Italian_coronav_tweets_2902.RData")
 
 

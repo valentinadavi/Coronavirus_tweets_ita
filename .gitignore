@@ -7,5 +7,17 @@ coronavirus_piemonte.RData
 coronavirus_veneto.RData
 coronavirus_lombardia.RData
 Italian_coronav_tweets_2402_b.RData
+<<<<<<< HEAD
 italian_coronav_tweets_2702.RData
 Italian_coronav_tweets_2902
+=======
+coronavirus_lombardia1.RData
+coronavirus_veneto1.RData
+coronavirus_piemonte1.RData
+coronavirus_piemonte.RData
+coronavirus_veneto.RData
+coronavirus_lombardia.RData
+Italian_coronav_tweets_2402_b.RData
+italian_coronav_tweets_2702.RData
+
+>>>>>>> 8bf541b8eb092687c0b59ab4c892049702a43080

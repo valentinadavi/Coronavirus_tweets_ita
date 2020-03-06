@@ -72,3 +72,28 @@ italian_coronav_tweets_0303 <- search_tweets2(
 #retreived tweets from 01 03 to 03 03. 
 
 save(italian_coronav_tweets_0303, file = "Italian_coronav_tweets_0303.RData")
+
+min_id_0303 <- since_id(italian_coronav_tweets_0303)
+#younger tweets of 2402b 
+italian_coronav_tweets_0503 <- search_tweets2(
+  c("coronavirus"), n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it", 
+  since_id = min_id_0303) 
+#retreived tweets from 01 03 to 03 03. 
+
+save(italian_coronav_tweets_0503, file = "Italian_coronav_tweets_0503.RData")
+
+oldertweet_0303 <- max_id(italian_coronav_tweets_0303$status_id) #older tweet from 0303, which is of the 1st of march
+youngertweet2702 <- since_id(italian_coronav_tweets_2702$status_id) #younger tweet from 2702, which is of 27 feb
+
+#now retrieving tweets that fall between the 27/02 and the 01/03 
+italian_coronav_tweets_27to01 <- search_tweets2(
+  c("coronavirus"), n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it", 
+  since_id = youngertweet2702, 
+  max_id=oldertweet_0303
+    ) 

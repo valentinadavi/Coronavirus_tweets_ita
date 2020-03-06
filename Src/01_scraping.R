@@ -97,3 +97,5 @@ italian_coronav_tweets_27to01 <- search_tweets2(
   since_id = youngertweet2702, 
   max_id=oldertweet_0303
     ) 
+
+save(italian_coronav_tweets_27to01, file="Italian_coronav_tweets_2702to0103.RData")

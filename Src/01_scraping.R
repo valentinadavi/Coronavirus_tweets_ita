@@ -113,3 +113,15 @@ italian_coronav_tweets_0603 <- search_tweets2(
 ) 
  
 save(italian_coronav_tweets_0603, file = "Italian_coronav_tweets_0603.Rdata")
+
+#downloading new data on 0803
+youngertweet0603 <- since_id(italian_coronav_tweets_0603$status_id) #younger tweet from 0603
+italian_coronav_tweets_0803 <- search_tweets2(
+  c("coronavirus"), n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it", 
+  since_id = youngertweet0603
+) 
+
+save(italian_coronav_tweets_0803, file = "Italian_coronav_tweets_0803.Rdata")

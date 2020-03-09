@@ -43,6 +43,19 @@ coronavirus_lombardia2 <- search_tweets(
 )
 save(coronavirus_lombardia2, file = "coronavirus_lombardia2.RData")
 
+#new obs 9th march
+last_id_lombardia <- max(coronavirus_lombardia2$status_id)
+
+coronavirus_lombardia3 <- search_tweets(
+  "#coronavirus OR coronavirus, #Lombardia OR Lombardia", 
+  n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it",
+  since_id = last_id_lombardia
+)
+save(coronavirus_lombardia3, file = "coronavirus_lombardia3.RData")
+
 #Coronavirus in Veneto retrievng 6591 obs.(24th February)-------------------------------------------------------
 
 coronavirus_veneto <- search_tweets(
@@ -84,6 +97,19 @@ coronavirus_veneto2 <- search_tweets(
 
 save(coronavirus_veneto2, file = "coronavirus_veneto2.RData")
 
+#new obs 9th march
+last_id_veneto <- max(coronavirus_veneto2$status_id)
+
+coronavirus_veneto3 <- search_tweets(
+  "#coronavirus OR coronavirus, #Lombardia OR Lombardia", 
+  n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it",
+  since_id = last_id_lombardia
+)
+save(coronavirus_veneto3, file = "coronavirus_veneto3.RData")
+
 
 #Coronavirus in Piemonte retrieving 1719 obs.(25th February)--------------------------------------------------------
 coronavirus_piemonte <- search_tweets(
@@ -121,3 +147,16 @@ coronavirus_piemonte2 <- search_tweets(
   since_id = last_id_piemonte
 )
 save(coronavirus_piemonte2, file = "coronavirus_piemonte2.RData")
+
+#new obs 9th march
+last_id_piemonte <- max(coronavirus_piemonte2$status_id)
+
+coronavirus_piemonte3 <- search_tweets(
+  "#coronavirus OR coronavirus, #Piemonte OR Piemonte", 
+  n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it",
+  since_id = last_id_piemonte
+)
+save(coronavirus_piemonte3, file = "coronavirus_piemonte3.RData")

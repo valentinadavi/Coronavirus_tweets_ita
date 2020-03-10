@@ -125,3 +125,28 @@ italian_coronav_tweets_0803 <- search_tweets2(
 ) 
 
 save(italian_coronav_tweets_0803, file = "Italian_coronav_tweets_0803.Rdata")
+
+#new download on 1003, making 2 as I don't have a 0903
+youngertweet0803 <- since_id(italian_coronav_tweets_0803$status_id) #younger tweet from 0803
+italian_coronav_tweets_0903 <- search_tweets2(
+  c("coronavirus"), n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it", 
+  since_id = youngertweet0803
+) 
+
+save(italian_coronav_tweets_0903, file = "Italian_coronav_tweets_0903.Rdata")
+
+#and then for 1003
+youngertweet0903 <- since_id(italian_coronav_tweets_0903$status_id) #younger tweet from 0903
+italian_coronav_tweets_1003 <- search_tweets2(
+  c("coronavirus"), n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it", 
+  since_id = youngertweet0903
+) 
+
+save(italian_coronav_tweets_1003, file = "Italian_coronav_tweets_1003.Rdata")
+

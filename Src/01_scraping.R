@@ -137,16 +137,6 @@ italian_coronav_tweets_0903 <- search_tweets2(
 ) 
 
 save(italian_coronav_tweets_0903, file = "Italian_coronav_tweets_0903.Rdata")
-
-#and then for 1003
-youngertweet0903 <- since_id(italian_coronav_tweets_0903$status_id) #younger tweet from 0903
-italian_coronav_tweets_1003 <- search_tweets2(
-  c("coronavirus"), n = 50000, 
-  retryonratelimit = TRUE, 
-  include_rts = FALSE, 
-  lang = "it", 
-  since_id = youngertweet0903
-) 
-
-save(italian_coronav_tweets_1003, file = "Italian_coronav_tweets_1003.Rdata")
+#this was ran on 12/03, retrieved tweets from 11 to 12/03. 
+#trying to get what's in the middle 
 

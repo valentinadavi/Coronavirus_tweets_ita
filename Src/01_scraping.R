@@ -139,4 +139,25 @@ italian_coronav_tweets_0903 <- search_tweets2(
 save(italian_coronav_tweets_0903, file = "Italian_coronav_tweets_0903.Rdata")
 #this was ran on 12/03, retrieved tweets from 11 to 12/03. 
 #trying to get what's in the middle 
+youngertweet0803 <- since_id(italian_coronav_tweets_0803$status_id) #younger tweet from 0803
+italian_coronav_tweets_0903bis <- search_tweets2(
+  c("coronavirus"), n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it", 
+  since_id = youngertweet0803
+) 
 
+save(italian_coronav_tweets_0903bis, file = "Italian_coronav_tweets_0903bis.RData")
+
+#trying to get older tweets and then newer: 
+youngertweet0903bis <- since_id(italian_coronav_tweets_0903bis$status_id) #younger tweet from 0903bis
+italian_coronav_tweets_1703 <- search_tweets2(
+  c("coronavirus"), n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it", 
+  since_id = youngertweet0903bis
+) 
+
+save(italian_coronav_tweets_1703, file = "Italian_coronav_tweets_1703.RData")

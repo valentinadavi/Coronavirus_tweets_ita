@@ -161,3 +161,27 @@ italian_coronav_tweets_1703 <- search_tweets2(
 ) 
 
 save(italian_coronav_tweets_1703, file = "Italian_coronav_tweets_1703.RData")
+
+youngertweet0803 <- since_id(italian_coronav_tweets_0803$status_id) #younger tweet from 0803
+older_0903bis <- max_id(italian_coronav_tweets_0903)
+  
+  italian_coronav_tweets_1703b <- search_tweets2(
+    c("coronavirus"), n = 50000, 
+    retryonratelimit = TRUE, 
+    include_rts = FALSE, 
+    lang = "it", 
+        max_id = 1237841105216929792, 
+    type = "recent"
+    )   
+#won't return anything 
+  
+  youngertweet1703 <- since_id(italian_coronav_tweets_1703$status_id) #younger tweet from 1703
+  italian_coronav_tweets_1703pt2 <- search_tweets2(
+    c("coronavirus"), n = 50000, 
+    retryonratelimit = TRUE, 
+    include_rts = FALSE, 
+    lang = "it", 
+    since_id = youngertweet1703
+  ) 
+  
+save(italian_coronav_tweets_1703pt2, file = "Italian_coronav_tweets_1703pt2.RData")

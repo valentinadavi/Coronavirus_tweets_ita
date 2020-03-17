@@ -27,5 +27,11 @@ coronavirus_lombardia3.RData
 coronavirus_veneto3.RData
 coronavirus_piemonte3.RData
 Italian_coronav_tweets_0903.Rdata
+<<<<<<< HEAD
 Italian_coronav_tweets_0903bis.RData
 Italian_coronav_tweets_1703.RData
+=======
+coronavirus_piemonte4.RData
+coronavirus_veneto4.RData
+coronavirus_lombardia4.RData
+>>>>>>> 76dd23c9b01c8f50327ef74ba6600b3d1d3b853f

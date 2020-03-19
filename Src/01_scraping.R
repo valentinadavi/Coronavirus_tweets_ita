@@ -197,3 +197,5 @@ italian_coronav_tweets_1903 <- search_tweets2(
 ) 
 
 save(italian_coronav_tweets_1903, file = "Italian_coronav_tweets_1903.RData")
+
+

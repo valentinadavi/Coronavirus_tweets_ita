@@ -185,3 +185,15 @@ older_0903bis <- max_id(italian_coronav_tweets_0903)
   ) 
   
 save(italian_coronav_tweets_1703pt2, file = "Italian_coronav_tweets_1703pt2.RData")
+
+
+youngertweet1703pt2 <- since_id(italian_coronav_tweets_1703pt2$status_id) #younger tweet from 1703
+italian_coronav_tweets_1903 <- search_tweets2(
+  c("coronavirus"), n = 50000, 
+  retryonratelimit = TRUE, 
+  include_rts = FALSE, 
+  lang = "it", 
+  since_id = youngertweet1703pt2
+) 
+
+save(italian_coronav_tweets_1903, file = "Italian_coronav_tweets_1903.RData")
